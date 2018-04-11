@@ -6,19 +6,14 @@ public class Player1 : MonoBehaviour {
 
     public Rigidbody rb;
     public float force=500;
+    public float forwordforce = 1500;
 	// Use this for initialization
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
+         
         //Debug.Log(tf.position);
-        if (Input.GetKey("w"))
-        {
-            rb.AddForce(new Vector3(-force,0,0));
-        }
-        if (Input.GetKey("s"))
-        {
-            rb.AddForce(new Vector3(force, 0, 0));
-        }
+        rb.AddForce(new Vector3(-forwordforce ,0,0));   
         if (Input.GetKey("d"))
         {
             rb.AddForce(new Vector3(0,0,force));
@@ -27,9 +22,6 @@ public class Player1 : MonoBehaviour {
         {
             rb.AddForce(new Vector3(0, 0, -force));
         }
-        if(Input.GetKeyUp(KeyCode.Space))
-        {
-            rb.AddForce(new Vector3(0, force*35, 0));
-        }
+        
     }
 }
