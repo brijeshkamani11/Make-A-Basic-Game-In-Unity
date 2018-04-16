@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player1 : MonoBehaviour {
+public class PlayerMovement : MonoBehaviour {
 
     public Rigidbody rb;
     public float force=500;
@@ -22,6 +22,7 @@ public class Player1 : MonoBehaviour {
         {
             rb.AddForce(new Vector3(0, 0, -force));
         }
-        
+       
+
     }
 }
